@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mimisome fortune cookie event landing page design and interaction project.">
+  <title>미미썸 포춘쿠키 이벤트</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" data-theme="light">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html#services">ABOUT</a>
+      <a href="index.html#projects">PROJECTS</a>
+      <a href="index.html#video">VIDEO</a>
+      <a href="works.html">ALL WORKS <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="project-detail-intro wrap" data-header-theme="light" aria-labelledby="project-title">
+      <p class="project-detail-description">미미썸 포춘쿠키 이벤트 랜딩페이지</p>
+      <h1 class="project-detail-title" id="project-title">Mimisome: Fortune Cookie Event Landing Page</h1>
+      <div class="project-detail-meta">
+        <ul class="category-list" aria-label="Project categories">
+          <li class="category-pill">LANDING PAGE</li>
+          <li class="category-pill">INTERACTION</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="fortune-project" data-header-theme="light" aria-label="Fortune cookie landing page preview">
+      <div class="fortune-stage">
+        <div class="fortune-page">
+          <section class="fortune-m1">
+            <span class="fortune-date">~ 5.9</span>
+            <img src="images/lucky01.png" class="fortune-logo" alt="mimisome">
+            <img src="images/lucky02.png" class="fortune-title-image" alt="행운의 포춘쿠키">
+            <img src="images/lucky02_2.png" class="fortune-cookie-image" alt="포춘쿠키 이벤트 이미지">
+          </section>
+
+          <section class="fortune-m2">
+            <div class="fortune-card-row" aria-hidden="true">
+              <div class="fortune-card fortune-card-side"><img src="images/lucky05.png" alt=""></div>
+              <div class="fortune-card fortune-card-main">
+                <img src="images/lucky05.png" alt="포춘쿠키">
+                <span><em>슈링크100샷<br>+ 쫀쫀팩</em><strong>9,900</strong>원</span>
+              </div>
+              <div class="fortune-card fortune-card-side"><img src="images/lucky05.png" alt=""></div>
+            </div>
+            <h2>미미썸 김해점 카톡 친구 한정<br>행운의 포츈쿠키 이벤트!</h2>
+            <button class="fortune-go-btn" type="button">쿠키뽑기 바로가기</button>
+          </section>
+
+          <section class="fortune-m3">
+            <ul>
+              <li>
+                <span class="fortune-num">1등</span>
+                <div class="fortune-prize"><img src="images/lucky07.png" alt=""><div><em>슈링크100샷 + 쫀쫀팩</em><strong>9,900원</strong></div></div>
+              </li>
+              <li><span class="fortune-num">2등</span><div class="fortune-prize"><div><em>인모드Fx</em><strong>49,000원</strong></div></div></li>
+              <li><span class="fortune-num">3등</span><div class="fortune-prize"><div><em>클라리티QIS 1회</em><strong>99,000원</strong></div></div></li>
+            </ul>
+          </section>
+
+          <section class="fortune-m4" id="fortune-cookie-section">
+            <div class="fortune-m4-top">
+              <span>EVENT</span>
+              <h2><strong>행운의 포츈쿠키</strong>는 무엇일까요?<br><strong>하나</strong>를 클릭해주세요</h2>
+            </div>
+            <div class="fortune-cookie-grid">
+              <button type="button" class="fortune-cookie-btn"><img src="images/li01.png" alt="포춘쿠키 1 선택"></button>
+              <button type="button" class="fortune-cookie-btn"><img src="images/li02.png" alt="포춘쿠키 2 선택"></button>
+              <button type="button" class="fortune-cookie-btn"><img src="images/li03.png" alt="포춘쿠키 3 선택"></button>
+              <button type="button" class="fortune-cookie-btn"><img src="images/li04.png" alt="포춘쿠키 4 선택"></button>
+            </div>
+            <div class="fortune-animation" aria-hidden="true">
+              <img src="images/ani02.png" class="fortune-ani01" alt="">
+              <img src="images/ani01.png" class="fortune-ani02" alt="">
+              <img src="images/ani03.png" class="fortune-ani03" alt="">
+              <img src="images/ani04.png" class="fortune-ani04" alt="">
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="fortune-popup" aria-hidden="true">
+    <div class="fortune-popup-inner">
+      <img src="images/popup.png" alt="포춘쿠키 당첨 결과">
+      <button type="button" class="fortune-popup-close" aria-label="팝업 닫기">×</button>
+    </div>
+  </div>
+
+  <footer class="contact dark-section" id="contact" data-header-theme="dark">
+    <div class="wrap">
+      <h2>LET'S CREATE<br>SOMETHING<br>TOGETHER.</h2>
+      <div class="footer-bottom">
+        <a href="mailto:a26013148@gmail.com">A26013148@GMAIL.COM <span aria-hidden="true">↗</span></a>
+        <a href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a>
+        <span>© 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    (() => {
+      const goButton = document.querySelector('.fortune-go-btn');
+      const cookieSection = document.querySelector('#fortune-cookie-section');
+      const cookieButtons = document.querySelectorAll('.fortune-cookie-btn');
+      const animation = document.querySelector('.fortune-animation');
+      const popup = document.querySelector('.fortune-popup');
+      const closeButton = document.querySelector('.fortune-popup-close');
+      let popupTimer;
+
+      goButton?.addEventListener('click', () => {
+        cookieSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      const closePopup = () => {
+        clearTimeout(popupTimer);
+        popup?.classList.remove('active');
+        popup?.setAttribute('aria-hidden', 'true');
+        animation?.classList.remove('on');
+      };
+
+      cookieButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          clearTimeout(popupTimer);
+          animation?.classList.remove('on');
+          void animation?.offsetWidth;
+          animation?.classList.add('on');
+          popupTimer = window.setTimeout(() => {
+            popup?.classList.add('active');
+            popup?.setAttribute('aria-hidden', 'false');
+          }, 3200);
+        });
+      });
+
+      closeButton?.addEventListener('click', closePopup);
+      popup?.addEventListener('click', (event) => {
+        if (event.target === popup) closePopup();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && popup?.classList.contains('active')) closePopup();
+      });
+    })();
+  </script>
+</body>
+</html>
